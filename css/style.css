@@ -169,3 +169,32 @@ width: 17px; height: 17px; border-radius: 50%; background: var(--gradient); bord
 .timeline-item p { margin: 0.2rem 0; }
 .timeline-date { display: inline-block; font-size: 0.8rem; font-weight: 800; color: var(--accent);
 background: var(--chip-bg); padding: 0.15rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem; }
+/* project cards */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.project-card {
+background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column;
+transition: transform 0.25s, box-shadow 0.25s;
+}
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(99, 102, 241, 0.2); }
+.project-thumb { height: 140px; display: grid; place-items: center; font-size: 3rem; }
+.t1 { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.t2 { background: linear-gradient(135deg, var(--accent-3), var(--accent)); }
+.t3 { background: linear-gradient(135deg, #f59e0b, var(--accent-2)); }
+.project-body { padding: 1.25rem 1.4rem 1.4rem; display: flex; flex-direction: column; flex: 1; }
+.project-body p { color: var(--muted); flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: 0.5rem 0 1rem; }
+.tags li { font-size: 0.78rem; font-weight: 700; color: var(--muted); border: 1px solid var(--border);
+padding: 0.15rem 0.6rem; border-radius: 999px; }
+.project-links a { font-weight: 700; }
+/* contact */
+.contact-card {
+text-align: center; padding: 3rem 1.5rem; border-radius: 24px; color: #fff;
+background: var(--gradient); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.35);
+}
+.contact-card p { opacity: 0.92; }
+.contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top:
+1.5rem; }
+.contact-card .btn-primary { background: #fff; color: #4338ca; box-shadow: none; }
+.contact-card .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+.contact-card .btn-ghost:hover { color: #fff; border-color: #fff; }
