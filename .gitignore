@@ -1,0 +1,7 @@
+# Secrets and local files — Git must NEVER commit these
+.env
+.env.*
+.vercel
+node_modules
+.DS_Store
+c
