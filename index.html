@@ -220,3 +220,11 @@ rel="noopener">GitHub ↗</a>
 <a href="#home" class="back-top">Back to top ↑</a>
 </div>
 </footer>
+<!-- Set the theme BEFORE the page draws, so there's no white flash in dark mode -->
+<script>
+(function () {
+var saved = localStorage.getItem("theme");
+var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+})();
+</script>
