@@ -26,6 +26,25 @@ Portfolio Starter — style.css
 --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 --max: 1100px;
 }
+[data-theme="dark"] {
+--accent: #818cf8;
+--accent-2: #f472b6;
+--accent-3: #22d3ee;
+--bg: #0b1020;
+--bg-alt: #111833;
+--surface: #151c34;
+--text: #e2e8f0;
+--muted: #94a3b8;
+--border: #263154;
+--shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+--nav-bg: rgba(11, 16, 32, 0.75);
+--chip-bg: #1e2748;
+--chip-text: #c7d2fe;
+--bot-bubble: #1e2748;
+--glow-1: rgba(129, 140, 248, 0.32);
+--glow-2: rgba(244, 114, 182, 0.20);
+}
+
 /* ---------- 2. Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -264,3 +283,174 @@ box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45); transition: transform 0.2s;
 .launcher-close { display: none; font-size: 1.3rem; }
 .chat-launcher[aria-expanded="true"] .launcher-open { display: none; }
 .chat-launcher[aria-expanded="true"] .launcher-close { display: inline; }
+
+
+
+
+
+.footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: var(--muted); font-size:
+0.9rem; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
+.footer p { margin: 0; 
+
+
+
+
+
+    /* ---------- 7. Scroll-reveal animation ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- 10. Respect "reduce motion" settings ---------- */
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto
+!important; }
+.reveal { opacity: 1; transform: none; }
+
+/* footer */

@@ -4,9 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ✏️ CUSTOMIZE: your name + a one-line description -->
-<title>Juan Dela Cruz | Portfolio</title>
-<meta name="description" content="Portfolio of Juan Dela Cruz, Grade 12 student and aspiring web
+<title>Aying Cirilo A. JR. | Portfolio</title>
+<meta name="description" content="Portfolio of Aying Cirilo A. JR., Grade 12 student and aspiring web
 developer.">
+ <!-- Set the theme BEFORE the page draws, so there's no white flash in dark mode -->
+<script>
+(function () {
+var saved = localStorage.getItem("theme");
+var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+})();
+</script>
+
 <!-- Google Font: Plus Jakarta Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +89,30 @@ developer</span>. I am trying to build clean, friendly websites — and I'm lear
 </div>
 </div>
 </section>
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+<div class="container">
+<div class="contact-card reveal">
+<h2>Let's connect! 🤝</h2>
+<p>Have a question or want to see my code? Reach out, or ask my chatbot.</p>
+<div class="contact-actions">
+<!-- ✏️ CUSTOMIZE: use a school/public email only -->
+<a class="btn btn-primary" href="mailto:juan.delacruz@example.com">✉️ Email me</a>
+<a class="btn btn-ghost" href="https://github.com/your-username" target="_blank"
+rel="noopener">GitHub ↗</a>
+</div>
+</div>
+</div>
+</section>
 </main>
+
+footer class="footer">
+<div class="container footer-inner">
+<p>© <span id="year">2026</span> Aying Cirilo A. JR. · Built with HTML, CSS &amp; JavaScript</p>
+<a href="#home" class="back-top">Back to top ↑</a>
+</div>
+</footer>
+<script src="js/main.js" defer></script>
 </body>
 </html>
 
@@ -254,6 +286,14 @@ optional AI upgrade.</p>
 </div>
 </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 
