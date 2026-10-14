@@ -4,9 +4,9 @@ Portfolio Starter — style.css
 [data-theme="dark"] to make the site your own.
 ========================================================= */
 /* ---------- 1. Theme variables ---------- */
-:root{ 
---accent: #008f05; /* main color (indigo) */
---accent-2: #ec4848; /* second color for gradients (pink) */
+:root {
+--accent: #6366f1; /* main color (indigo) */
+--accent-2: #ec4899; /* second color for gradients (pink) */
 --accent-3: #06b6d4; /* third color (cyan) */
 --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
 --bg: #f8fafc;
@@ -26,25 +26,6 @@ Portfolio Starter — style.css
 --font: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 --max: 1100px;
 }
-[data-theme="dark"] {
---accent: #818cf8;
---accent-2: #f472b6;
---accent-3: #22d3ee;
---bg: #0b1020;
---bg-alt: #111833;
---surface: #151c34;
---text: #e2e8f0;
---muted: #94a3b8;
---border: #263154;
---shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
---nav-bg: rgba(11, 16, 32, 0.75);
---chip-bg: #1e2748;
---chip-text: #c7d2fe;
---bot-bubble: #1e2748;
---glow-1: rgba(129, 140, 248, 0.32);
---glow-2: rgba(244, 114, 182, 0.20);
-}
-
 /* ---------- 2. Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -97,8 +78,6 @@ display: inline-grid; place-items: center; transition: transform 0.2s, border-co
 
 
 
-
-
 /* ---------- 4. Navbar (sticky) ---------- */
 .navbar {
 position: sticky; top: 0; z-index: 50;
@@ -106,12 +85,6 @@ background: var(--nav-bg); backdrop-filter: blur(12px); -webkit-backdrop-filter:
 border-bottom: 1px solid transparent; transition: border-color 0.3s, box-shadow 0.3s;
 }
 .navbar.scrolled { border-bottom-color: var(--border); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); }
-
-
-
-
-
-
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 1rem; }
 .logo { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; font-size: 1.15rem; color:
 var(--text); }
@@ -140,7 +113,7 @@ transition: transform 0.3s, opacity 0.3s; }
 
 
 
-/* ---------- 5. Hero ---------- */
+* ---------- 5. Hero ---------- */
 .hero { position: relative; overflow: hidden; padding: 5rem 0 6rem; }
 .hero-bg {
 position: absolute; inset: 0; pointer-events: none;
@@ -164,11 +137,6 @@ border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
 animation: float 6s ease-in-out infinite; }
 .avatar {
 width: clamp(180px, 24vw, 260px); aspect-ratio: 1; border-radius: 50%;
-
-
-
-
-
 display: grid; place-items: center; background: var(--surface);
 font-size: clamp(3rem, 7vw, 5rem); font-weight: 800; color: var(--accent);
 }
@@ -180,10 +148,6 @@ box-shadow: var(--shadow); animation: float 7s ease-in-out infinite;
 .fc1 { top: 12%; left: 0; }
 .fc2 { bottom: 10%; right: 0; animation-delay: -3s; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
-
-
-
-
 
 
 
@@ -209,8 +173,6 @@ border-radius: 10px; }
 
 
 
-
-
 /* skills chips */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0; }
@@ -224,10 +186,7 @@ padding: 0.4rem 0.9rem; border-radius: 999px; transition: transform 0.2s;
 
 
 
-
-
-
-/* education timeline */
+* education timeline */
 .timeline { list-style: none; margin: 0; padding: 0 0 0 1.5rem; border-left: 3px solid var(--border);
 display: grid; gap: 1.5rem; }
 .timeline-item { position: relative; background: var(--surface); border: 1px solid var(--border);
@@ -239,9 +198,6 @@ width: 17px; height: 17px; border-radius: 50%; background: var(--gradient); bord
 .timeline-item p { margin: 0.2rem 0; }
 .timeline-date { display: inline-block; font-size: 0.8rem; font-weight: 800; color: var(--accent);
 background: var(--chip-bg); padding: 0.15rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem; }
-
-
-
 
 
 
@@ -270,179 +226,53 @@ padding: 0.15rem 0.6rem; border-radius: 999px; }
 
 
 
-
-
-/* ---------- 8. Chatbot widget (floating) ---------- */
-.chat-launcher {
-position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 100;
-width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer;
-background: var(--gradient); color: #fff; font-size: 1.6rem;
-box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45); transition: transform 0.2s;
+/* contact */
+.contact-card {
+text-align: center; padding: 3rem 1.5rem; border-radius: 24px; color: #fff;
+background: var(--gradient); box-shadow: 0 20px 50px rgba(99, 102, 241, 0.35);
 }
-.chat-launcher:hover { transform: scale(1.07); }
-.launcher-close { display: none; font-size: 1.3rem; }
-.chat-launcher[aria-expanded="true"] .launcher-open { display: none; }
-.chat-launcher[aria-expanded="true"] .launcher-close { display: inline; }
-
-
-
-
+.contact-card p { opacity: 0.92; }
+.contact-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top:
+1.5rem; }
+.contact-card .btn-primary { background: #fff; color: #4338ca; box-shadow: none; }
+.contact-card .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, 0.6); }
+.contact-card .btn-ghost:hover { color: #fff; border-color: #fff; }
 
 .footer { border-top: 1px solid var(--border); padding: 1.5rem 0 5.5rem; color: var(--muted); font-size:
 0.9rem; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; }
-.footer p { margin: 0; 
+.footer p { margin: 0; }
 
 
 
 
 
-    /* ---------- 7. Scroll-reveal animation ---------- */
+
+[data-theme="dark"] {
+--accent: #818cf8;
+--accent-2: #f472b6;
+--accent-3: #22d3ee;
+--bg: #0b1020;
+--bg-alt: #111833;
+--surface: #151c34;
+--text: #e2e8f0;
+--muted: #94a3b8;
+--border: #263154;
+--shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+--nav-bg: rgba(11, 16, 32, 0.75);
+--chip-bg: #1e2748;
+--chip-text: #c7d2fe;
+--bot-bubble: #1e2748;
+--glow-1: rgba(129, 140, 248, 0.32);
+--glow-2: rgba(244, 114, 182, 0.20);
+}
+
+
+
+
+/* ---------- 7. Scroll-reveal animation ---------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -452,5 +282,4 @@ box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45); transition: transform 0.2s;
 *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto
 !important; }
 .reveal { opacity: 1; transform: none; }
-
-/* footer */
+}

@@ -22,11 +22,6 @@ setTheme(event.matches ? "dark" : "light");
 });
 
 
-
-
-
-
-
 // ---------- 2. Mobile menu (hamburger) ----------
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
@@ -41,10 +36,6 @@ navLinks.classList.remove("open");
 menuBtn.setAttribute("aria-expanded", "false");
 });
 });
-
-
-
-
 
 
 // ---------- 3. Navbar shadow when scrolling ----------
@@ -70,8 +61,7 @@ if (link) link.classList.add("active");
 
 
 
-
-sections.forEach(function (s) { sectionObserver.observe(s); });
+ections.forEach(function (s) { sectionObserver.observe(s); });
 // ---------- 5. Fade-in animation when elements scroll into view ----------
 const revealObserver = new IntersectionObserver(function (entries) {
 entries.forEach(function (entry) {
@@ -84,208 +74,3 @@ revealObserver.unobserve(entry.target); // animate only once
 document.querySelectorAll(".reveal").forEach(function (el) { revealObserver.observe(el); });
 // ---------- 6. Current year in the footer ----------
 document.getElementById("year").textContent = new Date().getFullYear();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ---------- 9. Responsive (tablets & phones) ---------- */
-@media (max-width: 860px) {
-.hero { padding: 3rem 0 4rem; }
-.hero-inner, .about-grid { grid-template-columns: 1fr; }
-.hero-art { order: -1; min-height: 240px; }
-.menu-btn { display: inline-flex; }
-.nav-links {
-position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; gap: 0;
-padding: 0.5rem 1.25rem 1rem; background: var(--surface); border-bottom: 1px solid var(--border);
-box-shadow: var(--shadow); display: none;
-}
-.nav-links.open { display: flex; }
-.nav-links a { display: block; padding: 0.8rem 0.5rem; }
-}
-@media (max-width: 480px) {
-.section { padding: 3.5rem 0; }
-.float-card { font-size: 0.8rem; }
-.chat-panel { right: 0.75rem; left: 0.75rem; width: auto; bottom: 5.5rem; height: calc(100vh - 7.5rem); }
-.chat-launcher { right: 1rem; bottom: 1rem; }
-}
