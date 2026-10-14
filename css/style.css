@@ -4,9 +4,9 @@ Portfolio Starter — style.css
 [data-theme="dark"] to make the site your own.
 ========================================================= */
 /* ---------- 1. Theme variables ---------- */
-:root {
---accent: #6366f1; /* main color (indigo) */
---accent-2: #ec4899; /* second color for gradients (pink) */
+:root{ 
+--accent: #008f05; /* main color (indigo) */
+--accent-2: #ec4848; /* second color for gradients (pink) */
 --accent-3: #06b6d4; /* third color (cyan) */
 --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
 --bg: #f8fafc;
