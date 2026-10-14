@@ -201,3 +201,22 @@ padding: 0.4rem 0.9rem; border-radius: 999px; transition: transform 0.2s;
 }
 .chips li:hover { transform: translateY(-2px); }
 .chips-soft li { background: transparent; border: 1.5px dashed var(--accent); }
+
+
+
+
+
+
+
+/* education timeline */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 1.5rem; border-left: 3px solid var(--border);
+display: grid; gap: 1.5rem; }
+.timeline-item { position: relative; background: var(--surface); border: 1px solid var(--border);
+border-radius: var(--radius); padding: 1.25rem 1.5rem; box-shadow: var(--shadow); }
+.timeline-item::before {
+content: ""; position: absolute; left: calc(-1.5rem - 10px); top: 1.5rem;
+width: 17px; height: 17px; border-radius: 50%; background: var(--gradient); border: 3px solid var(--bg);
+}
+.timeline-item p { margin: 0.2rem 0; }
+.timeline-date { display: inline-block; font-size: 0.8rem; font-weight: 800; color: var(--accent);
+background: var(--chip-bg); padding: 0.15rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem; }
