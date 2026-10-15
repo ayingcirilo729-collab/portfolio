@@ -34,7 +34,7 @@ const qa = {
   }
 };
 
-const fallback = "Hmm, I'm not sure about that. Try asking about my skills, education, projects, or contact info!";
+const fallback = "tangina mo";
 
 function getReply(userText) {
   const text = userText.toLowerCase();

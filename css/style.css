@@ -1,8 +1,8 @@
 /* 1. Theme variables */
 :root {
   --accent: #1804f8; /* main color (indigo) */
-  --accent-2: #ec48484c; /* second color for gradients (pink) */
-  --accent-3: #d45106; /* third color (cyan) */
+  --accent-2: #f40000; /* second color for gradients (pink) */
+  --accent-3: #d40606; /* third color (cyan) */
   --gradient: linear-gradient(135deg, var(--accent), var(--accent-2));
   --bg: #f8fafc;
   --bg-alt: #eef2ff;
