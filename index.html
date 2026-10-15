@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- CUSTOMIZE: your name + a one-line description -->
-<title>Juan Dela Cruz Portfolio</title>
+<title>AYING Portfolio</title>
 <meta name="description" content="Portfolio of Juan Dela Cruz, Grade 12 student and aspiring web developer.">
 <!-- Google Font: Plus Jakarta Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -246,6 +246,41 @@
 
 <script src="js/main.js" defer></script>
 
+
+
+
+
+
+
+<!-- ================= CHATBOT WIDGET ================= -->
+<button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false" aria-controls="chat-panel">
+<span class="launcher-open" aria-hidden="true">&#128172;</span>
+<span class="launcher-close" aria-hidden="true">&times;</span>
+</button>
+<section class="chat-panel" id="chat-panel" role="dialog" aria-label="Chat with Assistant" hidden>
+<header class="chat-header">
+<div class="chat-avatar" aria-hidden="true">&#129302;</div>
+<div>
+<p class="chat-title">My Assistant</p>
+<p class="chat-status"><span class="dot"></span> <span id="chat-mode">Online</span></p>
+</div>
+<button class="icon-btn chat-close" id="chat-close" type="button" aria-label="Close chat">&times;</button>
+</header>
+<ul class="chat-messages" id="chat-messages" aria-live="polite"></ul>
+<div class="quick-replies" id="quick-replies">
+<button type="button" data-question="What are your skills?">Skills</button>
+<button type="button" data-question="Where do you study?">Education</button>
+<button type="button" data-question="What projects have you made?">Projects</button>
+<button type="button" data-question="How can I contact you?">Contact</button>
+</div>
+<form class="chat-form" id="chat-form" autocomplete="off">
+<input id="chat-input" type="text" maxlength="500" placeholder="Ask me anything..." aria-label="Your message">
+<button type="submit" id="chat-send" aria-label="Send">&rarr;</button>
+</form>
+</section>
+
+
+<script type="module" src="js/chatbot.js"></script>
 
 
 
