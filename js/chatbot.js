@@ -64,10 +64,6 @@ answer: "You're welcome! 😊 Anything else you'd like to know?"
 const fallback = "Sorry, I don't understand. 😅 Ask me about skills, education, projects, or contact info.";
 
 
-
-
-
-
 // ---------- 3. Find the best rule-based reply ----------
 // Each topic gets a score = how many of its keywords appear. Highest score wins.
 function getReply(userText) {
@@ -91,7 +87,6 @@ bestTopic = topic;
 }
 return bestTopic ? qa[bestTopic].answer : fallback;
 }
-
 // ---------- 4. Ask the AI (our own server — the API key is NOT in this file!) ----------
 let aiAvailable = USE_AI;
 async function getAIReply(userText) {
@@ -109,7 +104,6 @@ const data = await response.json();
 if (!data.reply) throw new Error("Empty reply");
 return data.reply;
 }
-
 // ---------- 5. Chat UI ----------
 const launcher = document.getElementById("chat-launcher");
 const panel = document.getElementById("chat-panel");
@@ -128,14 +122,11 @@ messages.appendChild(li);
 messages.scrollTop = messages.scrollHeight;
 return li;
 }
-function showTyping() {}
+function showTyping(){
 const li = document.createElement("li");
 li.className = "message bot typing";
 li.setAttribute("aria-label", "Typing");
-
-
-
-
+}
 li.innerHTML = "<span></span><span></span><span></span>";
 messages.appendChild(li);
 messages.scrollTop = messages.scrollHeight;
@@ -185,3 +176,7 @@ addMessage(reply, "bot");
 sendBtn.disabled = false;
 input.focus();
 }
+
+
+
+
